@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .box {
+            background: lightblue;
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 300px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .box {
+                margin: 10px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header, .footer {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+            .box {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Responsive Web Page</h1>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h2>Box 1</h2>
+            <p>This is a responsive box. It adjusts its size based on the screen width.</p>
+        </div>
+        <div class="box">
+            <h2>Box 2</h2>
+            <p>This is another responsive box. Try resizing the browser window to see the effect.</p>
+        </div>
+        <div class="box">
+            <h2>Box 3</h2>
+            <p>All boxes will stack vertically on smaller screens.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Responsive Web Page. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
